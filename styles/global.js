@@ -16,8 +16,15 @@ export const globalStyles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: '#ddd',
-    padding: 15,
+    padding: 10,
     fontSize: 18,
     borderRadius: 6,
-  }
+  },
+  errorText: {
+    color: 'crimson',
+    fontWeight: 'bold',
+    marginBottom: 5,
+    marginTop: 6,
+    textAlign: 'center',
+  },
 });

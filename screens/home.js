@@ -83,11 +83,11 @@ const styles = StyleSheet.create({
   },
   modalToggle: {
     marginBottom: 10,
-    padding: 20,
+    padding: 10,
     alignSelf: 'center'
   },
   modalClose: {
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 0
   }
 })
