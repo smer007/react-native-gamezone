@@ -10,6 +10,7 @@ import {
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import { MaterialIcons } from '@expo/vector-icons';
+import ReviewForm from './reviewForm';
 
 export default function Home({ navigation: { navigate } }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -34,6 +35,14 @@ export default function Home({ navigation: { navigate } }) {
     },
   ]);
 
+  const addReview = values => {
+    values.key = reviews.length + 1;
+    setReviews(currentReviews => {
+      return [values, ...currentReviews];
+    });
+    setModalOpen(false);
+  }
+
   return (
     <View style={globalStyles.container}>
 
@@ -44,6 +53,7 @@ export default function Home({ navigation: { navigate } }) {
             size={20}
             style={{ ...styles.modalToggle, ...styles.modalClose}}
             onPress={() => setModalOpen(false)} />
+          <ReviewForm addReview={addReview} />
         </View>
       </Modal>
 
